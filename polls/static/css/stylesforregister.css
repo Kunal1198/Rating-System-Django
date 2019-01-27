@@ -1,0 +1,12 @@
+.card-login .input-group {
+	margin: 15px 0 0 0;
+}
+.card .card-header-primary, .card.bg-primary, .card.card-rotate.bg-primary .front, .card.card-rotate.bg-primary .back {
+	background: #303F9F;
+}
+.card .card-header-primary {
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(48, 63, 159, 0.6);
+}
+ul{
+    color: black;
+}

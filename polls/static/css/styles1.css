@@ -1,0 +1,36 @@
+#join {
+	margin-left: auto;
+	margin-right: auto;
+}
+.inform{
+	margin-top: 0;
+}
+.topbar .nav-tabs .nav-item .nav-link{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.card .card-header-danger, .card.bg-danger, .card.card-rotate.bg-danger .front, .card.card-rotate.bg-danger .back {
+    background: #303F9F;
+    border-radius: 0;
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(92, 107, 192, 0.6); 
+}
+.nav-pills .nav-item .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(92, 107, 192, 0.6);
+}
+.nav-pills .nav-item .nav-link {
+    color: white;
+}
+#questionishere{
+	font-family: 'Hind Vadodara', sans-serif;
+	font-weight: 300;
+}
+.question{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+}
+.form-check .form-check-label{
+	color: black;
+}
+

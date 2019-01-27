@@ -1,0 +1,64 @@
+ <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="{% url 'landing' %}">
+          SMS </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <ul class="navbar-nav mr-auto"> -->
+
+      <ul class="navbar-nav ml-auto">
+      {% if request.user.is_authenticated %}
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+          <span>Hi {{ request.user|capfirst }}</span>
+      </a>
+      <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">My Profile</a>
+        <a class="dropdown-item" href="#">Logout</a>
+      </div> -->
+      
+          
+          {% if request.user.student %}
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'edit_form' %}">
+              Edit Form
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'proctor' %}">Rate
+            </a>
+          </li>
+          {% endif %}
+          
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'edit_profile' %}" data-original-title="Like us on Facebook">
+              My profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="{% url 'user_logout' %}" data-original-title="Like us on Facebook">
+              Logout
+            </a>
+          </li>
+    </li>
+    {% else %}
+    <li class="nav-item">
+      <a href="{% url 'index' %}" class="nav-link">Login</a>
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'home' %}" class="nav-link">Graph</a>
+    </li>
+    {% endif %}
+          </ul>
+      </div>
+    </div>
+  </nav>

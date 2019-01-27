@@ -1,0 +1,78 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'style2.css' %}" >
+</head>
+<body>
+		
+	<div class="container">
+		<h1>Student Registration</h1>
+		<div class="form-group">
+			{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li> 
+					<div class="alert alert-success">{{message}}</div>
+				</li >
+				{% endfor %}
+			</ul>
+			{% endif %}
+		</div>
+		<form method="post" action="" class="form-horizotal">
+		{% csrf_token %}
+		<div class="form-group">
+			<label class="col-md-2 control-label">Name</label>
+		<div class="col-md-4">
+			{{ form1.username }}
+			{{ form1.username.errors }}
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">Email ID</label>
+		<div class="col-md-4">
+			{{ form1.email }}
+			{{ form1.email.errors }}
+
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">First name</label>
+		<div class="col-md-4">
+			{{ form1.first_name }}
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">Last name</label>
+		<div class="col-md-4">
+			{{ form1.last_name }}
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">Dept</label>
+		<div class="col-md-4">
+			{{ form1.department }}
+			
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">Password</label>
+		<div class="col-md-4">
+			{{ form1.password }}
+		</div>
+	    </div>
+	    <div class="form-group">
+	    	<label class="col-md-2 control-label">Confirm password</label>
+		<div class="col-md-4">
+			{{ form1.confirm_password }}
+			{{ form1.confirm_password.errors }}
+		</div>
+	    </div>
+	    <div class="col-md-3">
+		<button class="btn btn-primary" type="submit">Submit</button>
+		</div>
+	</form>
+	</div>
+</div>
+</body>
+</html>
